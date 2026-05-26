@@ -1,0 +1,27 @@
+body {
+
+  background: #111;
+  color: white;
+  font-family: Arial;
+  text-align: center;
+}
+
+h1 {
+
+  color: cyan;
+}
+
+.card {
+
+  background: #222;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+a {
+
+  color: cyan;
+  text-decoration: none;
+  font-size: 20px;
+}
