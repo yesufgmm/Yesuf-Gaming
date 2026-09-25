@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -57,12 +58,26 @@ h1{
     margin-bottom:25px;
 }
 
+.games{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
 .game-card{
     width:280px;
     background:#15151b;
     border:1px solid #292934;
     border-radius:14px;
     overflow:hidden;
+    text-decoration:none;
+    color:white;
+    transition:0.2s;
+}
+
+.game-card:hover{
+    transform:translateY(-5px);
+    border-color:#7c5cff;
 }
 
 .game-card img{
@@ -83,21 +98,10 @@ h1{
 
 .game-info p{
     color:#9999a3;
-    margin-bottom:15px;
-}
-
-.download{
-    display:block;
-    background:#7c5cff;
-    color:white;
-    text-decoration:none;
-    text-align:center;
-    padding:10px;
-    border-radius:8px;
-    font-weight:700;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -114,14 +118,15 @@ YESUF <span>GAMING</span>
 
 </header>
 
-
 <div class="container">
 
 <h1>💿 ROMs</h1>
 
-<div class="game-card">
+<div class="games">
 
-<img src="re2.jpg" alt="Resident Evil 2">
+<a href="re2.html" class="game-card">
+
+<img src="https://i.ebayimg.com/images/g/yU4AAOSwsjZkAjIZ/s-l1600.webp" alt="Resident Evil 2">
 
 <div class="game-info">
 
@@ -129,11 +134,9 @@ YESUF <span>GAMING</span>
 
 <p>🎮 PlayStation 1</p>
 
-<a href="#" class="download">
-تحميل
-</a>
-
 </div>
+
+</a>
 
 </div>
 
