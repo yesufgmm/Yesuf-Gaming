@@ -12,7 +12,6 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 
-    
 <style>
 
 *{
@@ -26,6 +25,8 @@ body{
     color:white;
     font-family:"Tajawal",sans-serif;
 }
+
+/* HEADER */
 
 header{
     background:#111116;
@@ -49,27 +50,34 @@ header{
     color:#7c5cff;
 }
 
+/* CONTAINER */
+
 .container{
     max-width:1100px;
     margin:auto;
-    padding:45px 20px;
+    padding:40px 20px;
 }
 
 h1{
-    margin-bottom:25px;
+    font-size:28px;
+    margin-bottom:30px;
 }
 
+/* GAMES GRID */
+
 .games{
-    display:flex;
-    flex-wrap:wrap;
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
     gap:20px;
 }
 
+/* GAME CARD */
+
 .game-card{
-    width:300px;
+    display:block;
     background:#15151b;
     border:1px solid #292934;
-    border-radius:14px;
+    border-radius:10px;
     overflow:hidden;
     text-decoration:none;
     color:white;
@@ -77,34 +85,58 @@ h1{
 }
 
 .game-card:hover{
-    transform:translateY(-5px);
+    transform:translateY(-4px);
     border-color:#7c5cff;
 }
 
+/* COVER */
+
 .game-card img{
     width:100%;
-    height:400px;
-    object-fit:contain;
-    background:#111116;
+    aspect-ratio:3 / 4;
+    object-fit:cover;
     display:block;
 }
 
+/* GAME INFO */
+
 .game-info{
-    padding:15px;
+    padding:12px;
 }
 
 .game-info h2{
-    font-size:19px;
-    margin-bottom:6px;
+    font-size:16px;
+    font-weight:700;
+    margin-bottom:5px;
 }
 
 .game-info p{
     color:#9999a3;
+    font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+    .games{
+        grid-template-columns:repeat(3, 1fr);
+    }
+}
+
+@media(max-width:650px){
+    .games{
+        grid-template-columns:repeat(2, 1fr);
+    }
+}
+
+@media(max-width:400px){
+    .games{
+        grid-template-columns:1fr;
+    }
 }
 
 </style>
 
-    
 </head>
 
 <body>
@@ -121,15 +153,20 @@ YESUF <span>GAMING</span>
 
 </header>
 
+
 <div class="container">
 
 <h1>💿 ROMs</h1>
 
+
 <div class="games">
+
+<!-- Resident Evil 2 -->
 
 <a href="re2.html" class="game-card">
 
-<img src="https://i.ebayimg.com/images/g/yU4AAOSwsjZkAjIZ/s-l1600.webp" alt="Resident Evil 2">
+<img src="https://i.ebayimg.com/images/g/yU4AAOSwsjZkAjIZ/s-l1600.webp"
+     alt="Resident Evil 2">
 
 <div class="game-info">
 
