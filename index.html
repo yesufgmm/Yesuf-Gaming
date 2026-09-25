@@ -1,257 +1,199 @@
-```html
+html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>YESUF GAMING</title>
+<title>YESUF GAMING</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<style>
 
-        body {
-            font-family: "Tajawal", sans-serif;
-            background: #0b0b0f;
-            color: #ffffff;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        header {
-            background: #111116;
-            border-bottom: 1px solid #24242c;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+body{
+    font-family:"Tajawal",sans-serif;
+    background:#0b0b0f;
+    color:#fff;
+}
 
-        .nav {
-            max-width: 1200px;
-            margin: auto;
-            padding: 18px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
+/* HEADER */
 
-        .logo {
-            font-size: 24px;
-            font-weight: 800;
-            color: #ffffff;
-            text-decoration: none;
-            white-space: nowrap;
-        }
+header{
+    background:#111116;
+    border-bottom:1px solid #24242c;
+}
 
-        .logo span {
-            color: #7c5cff;
-        }
+.nav{
+    max-width:1200px;
+    margin:auto;
+    padding:18px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
 
-        .search {
-            width: 350px;
-            max-width: 100%;
-        }
+.logo{
+    color:white;
+    text-decoration:none;
+    font-size:25px;
+    font-weight:800;
+}
 
-        .search input {
-            width: 100%;
-            background: #1a1a21;
-            border: 1px solid #292934;
-            border-radius: 10px;
-            padding: 12px 16px;
-            color: white;
-            outline: none;
-            font-family: inherit;
-            font-size: 14px;
-        }
+.logo span{
+    color:#7c5cff;
+}
 
-        .search input:focus {
-            border-color: #7c5cff;
-        }
+/* HERO */
 
-        .hero {
-            max-width: 1200px;
-            margin: auto;
-            padding: 70px 20px 45px;
-            text-align: center;
-        }
+.hero{
+    max-width:1200px;
+    margin:auto;
+    padding:75px 20px 45px;
+    text-align:center;
+}
 
-        .hero h1 {
-            font-size: 42px;
-            margin-bottom: 12px;
-        }
+.hero h1{
+    font-size:42px;
+    margin-bottom:12px;
+}
 
-        .hero h1 span {
-            color: #7c5cff;
-        }
+.hero h1 span{
+    color:#7c5cff;
+}
 
-        .hero p {
-            color: #9b9ba5;
-            font-size: 17px;
-        }
+.hero p{
+    color:#9999a3;
+    font-size:17px;
+}
 
-        .section {
-            max-width: 1200px;
-            margin: auto;
-            padding: 25px 20px;
-        }
+/* CATEGORIES */
 
-        .section-title {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
+.categories{
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
 
-        .section-title h2 {
-            font-size: 24px;
-        }
+.category{
+    position:relative;
+    height:250px;
+    border-radius:18px;
+    overflow:hidden;
+    border:1px solid #292934;
+    background:#15151b;
+    text-decoration:none;
+    color:white;
+    display:flex;
+    align-items:flex-end;
+    transition:0.25s;
+}
 
-        .section-title a {
-            color: #8d72ff;
-            text-decoration: none;
-            font-size: 14px;
-        }
+.category:hover{
+    transform:translateY(-6px);
+    border-color:#7c5cff;
+}
 
-        .games {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 18px;
-        }
+.category img{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    inset:0;
+    opacity:.55;
+    transition:.25s;
+}
 
-        .game {
-            background: #141419;
-            border: 1px solid #24242c;
-            border-radius: 14px;
-            overflow: hidden;
-            transition: 0.2s;
-        }
+.category:hover img{
+    opacity:.7;
+    transform:scale(1.04);
+}
 
-        .game:hover {
-            transform: translateY(-4px);
-            border-color: #7c5cff;
-        }
+.overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        transparent 25%,
+        rgba(0,0,0,.9) 100%
+    );
+}
 
-        .game img {
-            width: 100%;
-            height: 190px;
-            object-fit: cover;
-            display: block;
-            background: #202027;
-        }
+.category-content{
+    position:relative;
+    z-index:2;
+    padding:25px;
+}
 
-        .game-content {
-            padding: 15px;
-        }
+.category-content h2{
+    font-size:27px;
+    margin-bottom:5px;
+}
 
-        .game h3 {
-            font-size: 17px;
-            margin-bottom: 6px;
-        }
+.category-content p{
+    color:#c0c0c7;
+    font-size:14px;
+}
 
-        .game p {
-            color: #8f8f99;
-            font-size: 13px;
-            margin-bottom: 14px;
-        }
+/* FOOTER */
 
-        .download {
-            display: block;
-            width: 100%;
-            text-align: center;
-            background: #7c5cff;
-            color: white;
-            text-decoration: none;
-            padding: 10px;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 14px;
-        }
+footer{
+    margin-top:70px;
+    padding:30px 20px;
+    text-align:center;
+    border-top:1px solid #24242c;
+    background:#111116;
+    color:#777780;
+    font-size:13px;
+}
 
-        .download:hover {
-            background: #6948f0;
-        }
+/* MOBILE */
 
-        .no-results {
-            display: none;
-            text-align: center;
-            color: #888;
-            padding: 40px;
-        }
+@media(max-width:800px){
 
-        footer {
-            margin-top: 60px;
-            padding: 30px 20px;
-            text-align: center;
-            background: #111116;
-            border-top: 1px solid #24242c;
-            color: #777780;
-            font-size: 13px;
-        }
+    .categories{
+        grid-template-columns:1fr;
+    }
 
-        @media (max-width: 900px) {
-            .games {
-                grid-template-columns: repeat(2, 1fr);
-            }
+    .category{
+        height:210px;
+    }
 
-            .search {
-                width: 250px;
-            }
-        }
+    .hero{
+        padding:50px 20px 30px;
+    }
 
-        @media (max-width: 600px) {
-            .nav {
-                flex-direction: column;
-            }
+    .hero h1{
+        font-size:32px;
+    }
 
-            .search {
-                width: 100%;
-            }
+}
 
-            .hero {
-                padding: 45px 20px 30px;
-            }
-
-            .hero h1 {
-                font-size: 32px;
-            }
-
-            .games {
-                grid-template-columns: 1fr 1fr;
-                gap: 12px;
-            }
-
-            .game img {
-                height: 150px;
-            }
-        }
-    </style>
+</style>
 </head>
 
 <body>
 
 <header>
+
     <div class="nav">
 
         <a href="#" class="logo">
             YESUF <span>GAMING</span>
         </a>
 
-        <div class="search">
-            <input
-                type="text"
-                id="searchInput"
-                placeholder="🔍 ابحث عن لعبة..."
-            >
-        </div>
-
     </div>
+
 </header>
 
 
@@ -262,261 +204,84 @@
     </h1>
 
     <p>
-        ألعاب Android و PC في مكان واحد 🎮
+        اختر القسم الذي تريد تصفحه 🎮
     </p>
 
 </section>
 
 
-<section class="section">
+<section class="categories">
 
-    <div class="section-title">
-        <h2>📱 ألعاب Android</h2>
-        <a href="#">عرض الكل</a>
-    </div>
+    <!-- PC -->
 
-    <div class="games">
+    <a href="#" class="category">
 
-        <div class="game" data-name="Katana ZERO">
+        <img
+        src="https://placehold.co/1280x720/17171d/ffffff?text=PC+GAMES"
+        alt="PC Games">
 
-            <img
-                src="https://placehold.co/600x400/17171d/ffffff?text=Katana+ZERO"
-                alt="Katana ZERO"
-            >
+        <div class="overlay"></div>
 
-            <div class="game-content">
+        <div class="category-content">
 
-                <h3>Katana ZERO</h3>
+            <h2>🖥️ PC Games</h2>
 
-                <p>لعبة أكشن ومنصات</p>
-
-                <a href="#" class="download">
-                    تحميل
-                </a>
-
-            </div>
+            <p>ألعاب الكمبيوتر</p>
 
         </div>
 
-
-        <div class="game" data-name="Resident Evil 2">
-
-            <img
-                src="https://placehold.co/600x400/17171d/ffffff?text=Resident+Evil+2"
-                alt="Resident Evil 2"
-            >
-
-            <div class="game-content">
-
-                <h3>Resident Evil 2</h3>
-
-                <p>رعب وبقاء</p>
-
-                <a href="#" class="download">
-                    تحميل
-                </a>
-
-            </div>
-
-        </div>
+    </a>
 
 
-        <div class="game" data-name="Celeste">
+    <!-- ANDROID -->
 
-            <img
-                src="https://placehold.co/600x400/17171d/ffffff?text=Celeste"
-                alt="Celeste"
-            >
+    <a href="#" class="category">
 
-            <div class="game-content">
+        <img
+        src="https://placehold.co/1280x720/17171d/ffffff?text=ANDROID+GAMES"
+        alt="Android Games">
 
-                <h3>Celeste</h3>
+        <div class="overlay"></div>
 
-                <p>منصات ومغامرات</p>
+        <div class="category-content">
 
-                <a href="#" class="download">
-                    تحميل
-                </a>
+            <h2>📱 Android Games</h2>
 
-            </div>
+            <p>ألعاب الهواتف والأجهزة المحمولة</p>
 
         </div>
 
-
-        <div class="game" data-name="GTA Vice City">
-
-            <img
-                src="https://placehold.co/600x400/17171d/ffffff?text=GTA+Vice+City"
-                alt="GTA Vice City"
-            >
-
-            <div class="game-content">
-
-                <h3>GTA Vice City</h3>
-
-                <p>أكشن وعالم مفتوح</p>
-
-                <a href="#" class="download">
-                    تحميل
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
+    </a>
 
 
-<section class="section">
+    <!-- ROMS -->
 
-    <div class="section-title">
-        <h2>🖥️ ألعاب PC</h2>
-        <a href="#">عرض الكل</a>
-    </div>
+    <a href="#" class="category">
 
-    <div class="games">
+        <img
+        src="https://placehold.co/1280x720/17171d/ffffff?text=ROMS"
+        alt="ROMs">
 
-        <div class="game" data-name="Halo">
+        <div class="overlay"></div>
 
-            <img
-                src="https://placehold.co/600x400/17171d/ffffff?text=HALO"
-                alt="Halo"
-            >
+        <div class="category-content">
 
-            <div class="game-content">
+            <h2>💿 ROMs</h2>
 
-                <h3>Halo</h3>
-
-                <p>تصويب وخيال علمي</p>
-
-                <a href="#" class="download">
-                    تحميل
-                </a>
-
-            </div>
+            <p>ألعاب المحاكيات والمنصات القديمة</p>
 
         </div>
 
-
-        <div class="game" data-name="PES 2013">
-
-            <img
-                src="https://placehold.co/600x400/17171d/ffffff?text=PES+2013"
-                alt="PES 2013"
-            >
-
-            <div class="game-content">
-
-                <h3>PES 2013</h3>
-
-                <p>كرة قدم</p>
-
-                <a href="#" class="download">
-                    تحميل
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="game" data-name="Celeste PC">
-
-            <img
-                src="https://placehold.co/600x400/17171d/ffffff?text=Celeste+PC"
-                alt="Celeste PC"
-            >
-
-            <div class="game-content">
-
-                <h3>Celeste</h3>
-
-                <p>منصات ومغامرات</p>
-
-                <a href="#" class="download">
-                    تحميل
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="game" data-name="Counter Strike 1.6">
-
-            <img
-                src="https://placehold.co/600x400/17171d/ffffff?text=CS+1.6"
-                alt="Counter Strike 1.6"
-            >
-
-            <div class="game-content">
-
-                <h3>Counter-Strike 1.6</h3>
-
-                <p>تصويب وأونلاين</p>
-
-                <a href="#" class="download">
-                    تحميل
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="no-results" id="noResults">
-        لم يتم العثور على اللعبة 🔍
-    </div>
+    </a>
 
 </section>
 
 
 <footer>
 
-    © 2026 YESUF GAMING — جميع الحقوق محفوظة
+    © 2026 YESUF GAMING
 
 </footer>
 
-
-<script>
-
-    const searchInput = document.getElementById("searchInput");
-    const games = document.querySelectorAll(".game");
-    const noResults = document.getElementById("noResults");
-
-    searchInput.addEventListener("input", function () {
-
-        const search = this.value.toLowerCase().trim();
-
-        let found = false;
-
-        games.forEach(function (game) {
-
-            const name = game.dataset.name.toLowerCase();
-
-            if (name.includes(search)) {
-
-                game.style.display = "block";
-                found = true;
-
-            } else {
-
-                game.style.display = "none";
-
-            }
-
-        });
-
-        noResults.style.display =
-            found || search === "" ? "none" : "block";
-
-    });
-
-</script>
-
 </body>
 </html>
-```
