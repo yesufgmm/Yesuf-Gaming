@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
 
 <meta charset="UTF-8">
@@ -89,11 +90,12 @@ h1{
     border-color:#7c5cff;
 }
 
-/* COVER */
+/* ALL GAME IMAGES SAME SIZE */
 
 .game-card img{
     width:100%;
-    aspect-ratio:3 / 4;
+    aspect-ratio:16 / 9;
+    height:auto;
     object-fit:cover;
     display:block;
 }
@@ -115,31 +117,43 @@ h1{
     font-size:14px;
 }
 
-/* MOBILE */
+/* TABLET */
 
 @media(max-width:900px){
+
     .games{
         grid-template-columns:repeat(3, 1fr);
     }
+
 }
 
+/* MOBILE */
+
 @media(max-width:650px){
+
     .games{
         grid-template-columns:repeat(2, 1fr);
     }
+
 }
 
+/* SMALL MOBILE */
+
 @media(max-width:400px){
+
     .games{
         grid-template-columns:1fr;
     }
+
 }
 
 </style>
 
 </head>
 
+
 <body>
+
 
 <header>
 
@@ -161,12 +175,14 @@ YESUF <span>GAMING</span>
 
 <div class="games">
 
+
 <!-- Resident Evil 2 -->
 
 <a href="re2.html" class="game-card">
 
-<img src="https://i.ebayimg.com/images/g/yU4AAOSwsjZkAjIZ/s-l1600.webp"
-     alt="Resident Evil 2">
+<img
+src="https://www.relyonhorror.com/wp-content/uploads/2024/08/Original-Resident-Evil-2-Returns-to-PC-via-GOG.jpg"
+alt="Resident Evil 2">
 
 <div class="game-info">
 
@@ -178,9 +194,12 @@ YESUF <span>GAMING</span>
 
 </a>
 
+
 </div>
 
 </div>
+
 
 </body>
+
 </html>
