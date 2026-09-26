@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ألعاب Android | YESUF GAMING</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #0d0d12;
+            color: #f1f1f1;
+            font-family: "Tajawal", sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
+
+        header {
+            background: #111116;
+            border-bottom: 1px solid #25252e;
+            padding: 18px 6%;
+        }
+
+        .logo {
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        /* Main */
+
+        main {
+            width: 90%;
+            max-width: 1200px;
+            margin: 35px auto 60px;
+        }
+
+        .page-title {
+            margin-bottom: 25px;
+        }
+
+        .page-title h1 {
+            font-size: 30px;
+            margin-bottom: 5px;
+        }
+
+        .page-title p {
+            color: #9999a5;
+        }
+
+        /* Games Grid */
+
+        .games {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .game-card {
+            background: #15151c;
+            border: 1px solid #292934;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: 0.2s;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            border-color: #7c3aed;
+        }
+
+        .game-card img {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            display: block;
+        }
+
+        .game-info {
+            padding: 15px;
+        }
+
+        .game-info h2 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .game-info p {
+            color: #9999a5;
+            font-size: 14px;
+        }
+
+        /* Back */
+
+        .back {
+            display: inline-block;
+            margin-top: 30px;
+            color: #a78bfa;
+        }
+
+        .back:hover {
+            color: #c4b5fd;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 900px) {
+
+            .games {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+        }
+
+        @media (max-width: 650px) {
+
+            .games {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 400px) {
+
+            .games {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <a href="index.html" class="logo">
+        YESUF GAMING
+    </a>
+
+</header>
+
+<main>
+
+    <div class="page-title">
+
+        <h1>ألعاب Android</h1>
+
+        <p>ألعاب Android المتوفرة على الموقع</p>
+
+    </div>
+
+
+    <div class="games">
+
+        <!-- Gungrave G.O.R.E. UEE Mobile -->
+
+        <a href="gungrave.html" class="game-card">
+
+            <img
+                src="https://i.ytimg.com/vi/m4NHT6L59mc/maxresdefault.jpg"
+                alt="Gungrave G.O.R.E. UEE Mobile"
+            >
+
+            <div class="game-info">
+
+                <h2>Gungrave G.O.R.E. UEE Mobile</h2>
+
+                <p>📱 Android</p>
+
+            </div>
+
+        </a>
+
+    </div>
+
+
+    <a href="index.html" class="back">
+        ← العودة إلى الرئيسية
+    </a>
+
+</main>
+
+</body>
+
+</html>
